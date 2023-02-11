@@ -25,10 +25,11 @@ def split_to_parts(str_to_split: str) -> tuple:
 
     :return: кортеж с двумя частями
     """
-    part_1 = str(str_to_split[:len(str_to_split)//2 if len(str_to_split) % 2 == 0
-                                else len(str_to_split)//2 + 1])
-    part_2 = str(str_to_split[len(str_to_split)//2 if len(str_to_split) % 2 == 0
-                                else len(str_to_split)//2 + 1:])
+    from math import ceil
+
+    part_1 = str_to_split[0:ceil(len(str_to_split) / 2)]
+
+    part_2 = str_to_split[len(part_1):]
     return part_1, part_2
 
 
