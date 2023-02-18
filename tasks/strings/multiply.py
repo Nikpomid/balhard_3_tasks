@@ -14,12 +14,12 @@
 def multiply_str(user_string: str, n: str) -> str:
     """Дублирует строку n-раз
 
-    :param user_string: строка для повторения
+    :param user_string: строка для повтfcdорения
     :param n: число, сколько раз нужно продублировать
 
     :return: результирующая строка
     """
-    result = None
+    result = user_string * int(n)
     return result
 
 
